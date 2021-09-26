@@ -33,13 +33,14 @@ export default class App extends React.Component {
       ]
     };
   }
+
   render() {
     const {notes} = this.state;
 
     return (
       <div>
-         <button onClick={this.addNote}>+</button>
-        <Notes notes={notes} />
+        <button onClick={this.addNote}>+</button>
+        <Notes notes={notes} onDelete={this.deleteNote} />
       </div>
     );
   }
@@ -63,4 +64,12 @@ export default class App extends React.Component {
     });
   }
 
+  deleteNote = (id, e) => {
+    // Avoid triggering possible other events elsewhere when we delete a note
+    e.stopPropagation();
+
+    this.setState({
+      notes: this.state.notes.filter(note => note.id !== id)
+    });
+  }
 }

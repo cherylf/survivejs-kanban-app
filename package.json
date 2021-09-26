@@ -54,6 +54,8 @@
     "webpack-validator": "^2.1.1"
   },
   "dependencies": {
+    "app": "^0.1.0",
+    "components": "^0.1.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
   }
