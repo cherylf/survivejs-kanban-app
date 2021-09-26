@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "app": "^0.1.0",
+    "classnames": "^2.3.1",
     "components": "^0.1.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"

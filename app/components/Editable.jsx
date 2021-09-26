@@ -1,5 +1,8 @@
 import React from 'react';
 
+import classnames from 'classnames';
+
+
 export default ({editing, value, onEdit, className, ...props}) => {
   if(editing) {
     return <Edit
@@ -9,7 +12,7 @@ export default ({editing, value, onEdit, className, ...props}) => {
       {...props} />;
   }
 
-  return <span className={className('value', className)} {...props}>{value}</span>;
+  return <span className={classnames('value', className)} {...props}>{value}</span>;
 }
 
 class Edit extends React.Component{
